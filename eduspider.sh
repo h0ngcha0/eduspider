@@ -5,8 +5,18 @@ base_dir=$PWD
 env_dir=$base_dir/env
 nodes_dir=$base_dir/nodes
 riak_dir=$env_dir/riak
+riak_repo="git://github.com/basho/riak.git"
 eduspider_web_dir=$nodes_dir/eduspider_web
+eduspider_web_repo="git@github.com:liuhongchao/eduspider_web.git"
 eduspider_be_dir=$nodes_dir/eduspider_be
+eduspider_be_repo="git@github.com:liuhongchao/eduspider_be.git"
+
+case `uname` in
+    Linux)   make="make";;
+    FreeBSD) make="gmake";;
+    Darwin)  make="make";;
+    *)       exit 2;;
+esac
 
 usage() {
     local script=${0##/*/}
@@ -15,37 +25,65 @@ usage() {
 }
 
 init() {
-    case `uname` in
-        Linux)   make="make";;
-        FreeBSD) make="gmake";;
-        Darwin)  make="make";;
-        *)       exit 2;;
-    esac
+    build_env
+    build_node
+}
 
+build_env() {
     if [ ! -d $env_dir ] ; then
         mkdir $env_dir
         cd $env_dir
-        git clone git://github.com/basho/riak.git
-        cd $riak_dir
-        $make all
-        [ -d dev ] || $make devrel
+        echo "cloning riak..."
+        clone $riak_dir $riak_repo
+        echo "compiling riak..."
+        compile_riak $riak_dir
     else
         echo $env_dir directory already created
     fi
+}
 
+build_node() {
     if [ ! -d $nodes_dir ] ; then
         mkdir $nodes_dir
+
         cd $nodes_dir
-        git clone git@github.com:liuhongchao/eduspider_web.git
-        cd $eduspider_web_dir
-        make
+        echo "compiling eduspider backend..."
+        clone_and_compile $eduspider_be_dir $eduspider_be_repo
+
         cd $nodes_dir
-        git clone git@github.com:liuhongchao/eduspider_be.git
-        cd $eduspider_be_dir
-        make
+        echo "compiling eduspider web..."
+        clone_and_compile $eduspider_web_dir $eduspider_web_repo
     else
         echo $nodes_dir directory already created
     fi
+}
+
+clone_and_compile() {
+    dir=$1
+    giturl=$2
+
+    clone $dir $giturl
+    compile $dir
+}
+
+clone() {
+    dir=$1
+    giturl=$2
+
+    git clone $giturl $(basename $dir)
+}
+
+compile() {
+    dir=$1
+    cd $dir
+    $make
+}
+
+compile_riak() {
+    dir=$1
+    cd $dir
+    $make all
+    [ -d dev ] || $make devrel
 }
 
 start_backend() {
@@ -54,8 +92,8 @@ start_backend() {
     start_riak
 
     cd $eduspider_be_dir
-    echo "Starting eduspider core..."
-    make devstart
+    echo "Starting eduspider backend..."
+    $make devstart
 }
 
 start_web() {
@@ -64,7 +102,7 @@ start_web() {
     cd $eduspider_web_dir
 
     echo "Starting eduspider web..."
-    make devstart
+    $make devstart
 }
 
 start_riak() {
