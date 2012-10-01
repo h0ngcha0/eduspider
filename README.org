@@ -1,8 +1,25 @@
-__________________                     ______________
-___  ____/_____  /___  ___________________(_)_____  /____________
-__  __/  _  __  /_  / / /_  ___/__  __ \_  /_  __  /_  _ \_  ___/
-_  /___  / /_/ / / /_/ /_(__  )__  /_/ /  / / /_/ / /  __/  /
-/_____/  \__,_/  \__,_/ /____/ _  .___//_/  \__,_/  \___//_/
-                               /_/
+EEEEEEEEEEEEEEEEEEEEEE            d::::::d                                                         iiii              d::::::d
+E::::::::::::::::::::E            d::::::d                                                        i::::i             d::::::d
+E::::::::::::::::::::E            d::::::d                                                         iiii              d::::::d
+EE::::::EEEEEEEEE::::E            d:::::d                                                                            d:::::d
+  E:::::E       EEEEEE    ddddddddd:::::d uuuuuu    uuuuuu      ssssssssss   ppppp   ppppppppp   iiiiiii     ddddddddd:::::d     eeeeeeeeeeee    rrrrr   rrrrrrrrr
+  E:::::E               dd::::::::::::::d u::::u    u::::u    ss::::::::::s  p::::ppp:::::::::p  i:::::i   dd::::::::::::::d   ee::::::::::::ee  r::::rrr:::::::::r
+  E::::::EEEEEEEEEE    d::::::::::::::::d u::::u    u::::u  ss:::::::::::::s p:::::::::::::::::p  i::::i  d::::::::::::::::d  e::::::eeeee:::::eer:::::::::::::::::r
+  E:::::::::::::::E   d:::::::ddddd:::::d u::::u    u::::u  s::::::ssss:::::spp::::::ppppp::::::p i::::i d:::::::ddddd:::::d e::::::e     e:::::err::::::rrrrr::::::r
+  E:::::::::::::::E   d::::::d    d:::::d u::::u    u::::u   s:::::s  ssssss  p:::::p     p:::::p i::::i d::::::d    d:::::d e:::::::eeeee::::::e r:::::r     r:::::r
+  E::::::EEEEEEEEEE   d:::::d     d:::::d u::::u    u::::u     s::::::s       p:::::p     p:::::p i::::i d:::::d     d:::::d e:::::::::::::::::e  r:::::r     rrrrrrr
+  E:::::E             d:::::d     d:::::d u::::u    u::::u        s::::::s    p:::::p     p:::::p i::::i d:::::d     d:::::d e::::::eeeeeeeeeee   r:::::r
+  E:::::E       EEEEEEd:::::d     d:::::d u:::::uuuu:::::u  ssssss   s:::::s  p:::::p    p::::::p i::::i d:::::d     d:::::d e:::::::e            r:::::r
+EE::::::EEEEEEEE:::::Ed::::::ddddd::::::ddu:::::::::::::::uus:::::ssss::::::s p:::::ppppp:::::::pi::::::id::::::ddddd::::::dde::::::::e           r:::::r
+E::::::::::::::::::::E d:::::::::::::::::d u:::::::::::::::us::::::::::::::s  p::::::::::::::::p i::::::i d:::::::::::::::::d e::::::::eeeeeeee   r:::::r
+E::::::::::::::::::::E  d:::::::::ddd::::d  uu::::::::uu:::u s:::::::::::ss   p::::::::::::::pp  i::::::i  d:::::::::ddd::::d  ee:::::::::::::e   r:::::r
+EEEEEEEEEEEEEEEEEEEEEE   ddddddddd   ddddd    uuuuuuuu  uuuu  sssssssssss     p::::::pppppppp    iiiiiiii   ddddddddd   ddddd    eeeeeeeeeeeeee   rrrrrrr
+                                                                              p:::::p
+                                                                              p:::::p
+                                                                             p:::::::p
+                                                                             p:::::::p
+                                                                             p:::::::p
+                                                                             ppppppppp
+
 
 * online education with socialist characteristics
